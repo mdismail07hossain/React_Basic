@@ -1,10 +1,11 @@
 import React from "react";
+import { PiArrowFatLineDownFill } from "react-icons/pi";
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div>
-      <div className="navbar bg-base-100">
+    <div className="z-100">
+      <div className="navbar bg-gray-300 font-bold ">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -25,7 +26,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow"
             >
               <li>
                 <Link to="/">Home</Link>
@@ -33,12 +34,11 @@ const Navbar = () => {
               <li>
                 <a>About</a>
                 <ul className="p-2">
-                 
                   <li>
                     <Link to="Presonal">Presonal</Link>
                   </li>
                   <li>
-                    <Link to ="Skill">Work Skills</Link>
+                    <Link to="Skill">Work Skills</Link>
                   </li>
                 </ul>
               </li>
@@ -47,29 +47,45 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">React ai</a>
+          <NavLink to="/" className="btn btn-ghost text-xl">
+            React ai
+          </NavLink>
         </div>
         {/* lagre device  */}
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link to="/">Home</Link>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <details>
-                <summary>About</summary>
-                <ul className="p-2">
-                  <li>
+              <div className="dropdown">
+                <div
+                  tabIndex={0}
+                  role="button"
+                  
+                >
+               <div className="flex justify-center items-center gap-3">
+               About 
+               <PiArrowFatLineDownFill />
+               </div>
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] top-10 mt-3 w-52 p-2 shadow"
+                >
+                 <li>
                     <Link to="Presonal">Presonal</Link>
                   </li>
                   <li>
-                    <Link to ="Skill">Work Skills</Link>
+                    <Link to="Skill">Work Skills</Link>
                   </li>
                 </ul>
-              </details>
+              </div>
             </li>
+           
+
             <li>
-              <Link to="/blog">Blog</Link>
+              <NavLink to="/blog">Blog</NavLink>
             </li>
           </ul>
         </div>
