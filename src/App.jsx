@@ -7,6 +7,7 @@ import Presonal from "./pages/Presonal";
 import Work_skill from "./pages/Work_skill";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Gallery from "./pages/Gallery";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="blog" element={<Blog />} />
+          <Route path="gallery" element={<Gallery />} />
           <Route path="presonal" element={<Presonal />} />
           <Route path="Skill" element={<Work_skill />} />
         </Routes>
