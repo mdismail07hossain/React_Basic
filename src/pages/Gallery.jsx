@@ -6,7 +6,7 @@ const Gallery = () => {
       <div className="flex items-top justify-center  bg-blue-200 p-6 ">
         <div className="bg-white p-6  shadow-lg max-w-md w-full text-center">
           <h1 className="text-3xl font-semibold text-gray-800 mb-4">
-            My Blogs
+            My Gallery
           </h1>
           <p className="text-lg text-gray-600">
             I am a Web Application Developer, passionate about building modern,
