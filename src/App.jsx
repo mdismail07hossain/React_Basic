@@ -1,4 +1,3 @@
-import React from "react";
 import Home from "./pages/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Blog from "./pages/Blog";
@@ -8,13 +7,20 @@ import Work_skill from "./pages/Work_skill";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Gallery from "./pages/Gallery";
+import React, { useState } from "react";
 
 export default function App() {
+  const [toggle, setToggle] = useState(false); // State for toggle (false for light mode, true for dark mode)
+
+  const toggleHandler = () => {
+    setToggle(!toggle); // Toggle the state
+  };
+
   return (
-    <div>
+    <div className={`bg-[--theme-color] ${toggle ? "dark" : ""}`}>
       <BrowserRouter>
-        <div className=""><Header/></div>
-      <div className="z-10"><Navbar/></div>
+        <Header />
+        <Navbar toggle={toggle} toggleHandler={toggleHandler} /> {/* Pass toggle state and handler */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="blog" element={<Blog />} />
@@ -22,7 +28,7 @@ export default function App() {
           <Route path="presonal" element={<Presonal />} />
           <Route path="Skill" element={<Work_skill />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     </div>
   );

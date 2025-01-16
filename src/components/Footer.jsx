@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer(props) {
     return (
-        <footer className="bg-gray-800  py-6 footer  text-neutral-content p-10">
+        <footer className="  py-6 footer border border-gray-50 shadow-2xl text-[--theme-color1] p-10">
              <nav>
     <h6 className="footer-title">Services</h6>
     <a className="link link-hover">Branding</a>
@@ -38,8 +38,8 @@ function Footer(props) {
                         <i className="fab fa-linkedin-in"></i> LinkedIn
                     </a>
                 </div>
-                <p className="text-sm text-gray-400">
-                    Built with ❤️ by MD ISMAIL.
+                <p className="text-sm ">
+                    Built with  by MD ISMAIL.
                 </p>
             </div>
         </footer>
