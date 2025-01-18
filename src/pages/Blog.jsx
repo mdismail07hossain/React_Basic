@@ -73,9 +73,7 @@ const Blog = () => {
 </div>
 <div className="card bg-base-100  shadow-xl">
   <figure>
-    <img
-      src="/src/assets/carasol/c_img-1.jpg"
-      alt="Shoes" />
+    <img src="/src/assets/carasol/c_img-1.jpg"alt="Shoes" />
   </figure>
   <div className="card-body  text-slate-950">
     <h2 className="card-title">Shoes!</h2>
