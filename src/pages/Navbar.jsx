@@ -85,6 +85,9 @@ const Navbar = ({ toggle, toggleHandler }) => {
             <li>
               <NavLink to="/gallery">Gallery</NavLink>
             </li>
+            <li>
+              <NavLink to="/countvalue">Countvalue</NavLink>
+            </li>
 
             {/* Toggle Theme */}
             <label className="swap swap-rotate">

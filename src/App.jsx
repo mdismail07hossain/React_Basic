@@ -7,7 +7,9 @@ import Work_skill from "./pages/Work_skill";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Gallery from "./pages/Gallery";
+
 import React, { useState } from "react";
+import Countvalue from "./pages/Countvalue";
 
 export default function App() {
   const [toggle, setToggle] = useState(false); // State for toggle (false for light mode, true for dark mode)
@@ -27,6 +29,8 @@ export default function App() {
           <Route path="gallery" element={<Gallery />} />
           <Route path="presonal" element={<Presonal />} />
           <Route path="Skill" element={<Work_skill />} />
+          <Route path="countvalue" element={<Countvalue />} />
+          
         </Routes>
         <Footer />
       </BrowserRouter>
